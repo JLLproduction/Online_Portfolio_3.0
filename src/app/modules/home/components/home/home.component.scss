@@ -1,0 +1,38 @@
+#canvas {
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+    filter: blur(30px);
+  -webkit-filter: blur(30px);
+}
+
+.bio {
+    background-color: #F2F3F4 ;
+    opacity: .75;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 360px;
+    font-weight: bold;
+}
+
+.bio:first-child {
+    padding-top: 25px;
+    border-top-right-radius: 70px;
+}
+
+.bio:last-child {
+    padding-bottom: 25px;
+    border-bottom-left-radius: 70px;
+}
+
+.uniqueFeel {
+    color: #267491;
+    font-style: italic;
+    font-size: 2.3rem;
+}
