@@ -1,3 +1,5 @@
+$main-black-color: #000205;
+
 #canvas {
     border: 1px solid red;
     width: 100%;
@@ -6,24 +8,25 @@
     z-index: -1;
     left: 0px;
     top: 0px;
-    filter: blur(30px);
-  -webkit-filter: blur(30px);
+    filter: blur(60px);
+  -webkit-filter: blur(60px);
 }
 
 .bio {
-    background-color: #F2F3F4 ;
-    opacity: .75;
+    opacity: 1;
     padding-left: 25px;
     padding-right: 25px;
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 550px;
     min-width: 360px;
     font-weight: bold;
+    border-left: 4px solid $main-black-color;
 }
 
 .bio:first-child {
     padding-top: 25px;
     border-top-right-radius: 70px;
+    border-top: 4px solid $main-black-color;
 }
 
 .bio:last-child {
@@ -35,4 +38,10 @@
     color: #267491;
     font-style: italic;
     font-size: 2.3rem;
+    -webkit-text-stroke: 1px $main-black-color;
+    // text-shadow:
+    // -1px -1px 0 $main-black-color,  
+    // 1px -1px 0 $main-black-color,
+    // -1px 1px 0 $main-black-color,
+    // 1px 1px 0 $main-black-color;
 }

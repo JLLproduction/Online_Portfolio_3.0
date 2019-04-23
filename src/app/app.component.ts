@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  currRoute: string;
+
+  constructor(private route: Router) {
+  }
+
+  ngOnInit() {
+    this.route.events.subscribe((url:any) => {
+      this.currRoute = this.route.url;
+    });
+  }
 }

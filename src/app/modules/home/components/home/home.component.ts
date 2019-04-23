@@ -10,20 +10,19 @@ export class HomeComponent implements AfterViewInit {
 
   canvasG: any;
   ctx: any;
-  backgroundColor = 'black';
-  counter = 0;
   dx: number;
   dy: number;
   x: number;
   y: number;
-  radi = 300;
-  circlArray = [];
+  radi: number;
+  circleArray: Array<any>;
 
   colorArray = [
     '#000205',
     '#072c3a',
     '#267491',
     '#a7b8b5',
+    '#cec5bc',
     '#cec5bc'
   ];
 
@@ -31,37 +30,67 @@ export class HomeComponent implements AfterViewInit {
     this.canvasG = this.canvas.nativeElement;
     this.ctx = this.canvasG.getContext('2d');
     this.setCanvas();
+    this.animate();
   }
 
   setCanvas() {
+    this.circleArray = [];
+
     this.canvasG.width = window.innerWidth;
     this.canvasG.height = window.innerHeight;
 
-    for (let i = 0; i < 100; i++) {
-      this.dx = this.getRandomInt(5);
-      this.dy = this.getRandomInt(5);
+    let numCircles: number;
+
+    //Change radius and number of circles on resize
+    if(this.canvasG.width > 1200) {
+      this.radi = 300;
+      numCircles = 300;
+    } else if (this.canvasG.width > 720 && this.canvasG.width <= 1200) {
+      this.radi = 250;
+      numCircles = 250;
+    } else if (this.canvasG.width <= 720) {
+      this.radi = 200;
+      numCircles = 150;
+    }
+    
+    let colori = 0;
+
+    let changeX = -1;
+    
+    //Build put the instructions for building circle in an array to loop through
+    for (let i = 0; i < numCircles; i++) {
+
+      this.dx = (this.getRandomInt(3) + 1) * changeX;
+      this.dy = (this.getRandomInt(3) + 1) * changeX;
+
       this.x = this.getRandomInt(this.canvasG.width);
       this.y = this.getRandomInt(this.canvasG.height);
-      let color = this.getRandomInt(this.colorArray.length);
 
-      this.circlArray.push({ dx: this.dx, dy: this.dy, x: this.x, y: this.y, radi: this.radi, color: this.colorArray[color] });
+      if( colori < this.colorArray.length ) {
+        colori ++;
+      } else {
+        colori = 0;
+      }
+
+      changeX *= -1;
+      
+      this.circleArray.push({ dx: this.dx, dy: this.dy, x: this.x, y: this.y, radi: this.radi, color: this.colorArray[colori] });
     }
-    this.animate();
   }
 
   animate() {
     requestAnimationFrame(() => this.animate());
     this.ctx.clearRect(0, 0, this.canvasG.width, this.canvasG.height);
 
-    this.circlArray.map(x => {
+    this.circleArray.map(x => {
       this.createCircle(x.x, x.y, x.radi, x.color);
 
-      if (x.x > this.canvasG.width || x.x < 0) {
-        x.dx = -x.dx;
+      if ( x.x > (this.canvasG.width + (x.radi * 2)) || x.x < (0 - (x.radi * 2)) ) {
+        x.dx *= -1;
       }
 
-      if (x.y > this.canvasG.height || x.y < 0) {
-        x.dy = -x.dy;
+      if (x.y > (this.canvasG.height + (x.radi * 2)) || x.y < (0 - (x.radi * 2)) ) {
+        x.dy *= -1;
       }
 
       x.x += x.dx;
@@ -71,8 +100,7 @@ export class HomeComponent implements AfterViewInit {
 
   createCircle(left: number, top: number, radius: number, color: string) {
     this.ctx.fillStyle = color;
-    //this.ctx.strokeStyle = color;
-    this.ctx.globalAlpha = .2;
+    this.ctx.globalAlpha = 1;
 
     this.ctx.beginPath();
     this.ctx.arc(left, top, radius, 0, 2 * Math.PI, true);

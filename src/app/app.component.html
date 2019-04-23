@@ -1,3 +1,3 @@
-<app-nav class="mb-auto"></app-nav>
-<router-outlet></router-outlet>
+<app-nav *ngIf="this.currRoute !== '/home'"></app-nav>
+<router-outlet class="mt-auto"></router-outlet>
 <app-footer class="mt-auto"></app-footer>
