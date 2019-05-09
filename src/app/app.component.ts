@@ -8,14 +8,18 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  currRoute: string;
+  showNav: boolean;
 
   constructor(private route: Router) {
   }
 
   ngOnInit() {
     this.route.events.subscribe((url:any) => {
-      this.currRoute = this.route.url;
+      if( this.route.url === '/home' || this.route.url === '/') {
+         this.showNav = false;
+      } else {
+        this.showNav = true;
+      }
     });
   }
 }

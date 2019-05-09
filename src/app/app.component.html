@@ -1,3 +1,12 @@
-<app-nav *ngIf="this.currRoute !== '/home'"></app-nav>
-<router-outlet class="mt-auto"></router-outlet>
+<div *ngIf="this.showNav; else home" class="row align-items-center h-100">
+    <div class="col-6">
+        <app-nav></app-nav>
+    </div>
+    <div class="col-6">
+        <router-outlet class="mt-auto"></router-outlet>
+    </div>
+</div>
+<ng-template #home>
+    <router-outlet class="mt-auto"></router-outlet>
+</ng-template>
 <app-footer class="mt-auto"></app-footer>

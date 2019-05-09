@@ -11,15 +11,16 @@ const routes: Routes = [
     loadChildren: './modules/about/about.module#AboutModule'
   },
   {
-    path: 'experience',
-    loadChildren: './modules/experience/experience.module#ExperienceModule'
-  },
-  {
     path: 'projects',
     loadChildren: './modules/projects/projects.module#ProjectsModule'
   },
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
     redirectTo: 'home',
     pathMatch: 'full'
   }

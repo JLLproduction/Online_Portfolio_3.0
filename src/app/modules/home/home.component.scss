@@ -1,37 +1,30 @@
 $main-black-color: #000205;
+$second: #072c3a;
+$third: #267491;
+$fourth:#a7b8b5;
+$fifth: #cec5bc;
 
-#canvas {
-    border: 1px solid red;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    z-index: -1;
-    left: 0px;
-    top: 0px;
-    filter: blur(60px);
-  -webkit-filter: blur(60px);
-}
-
-.bio {
-    opacity: 1;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin: 0 auto;
+.bio-wrapper {
+    padding: 25px;
     max-width: 550px;
     min-width: 360px;
     font-weight: bold;
     border-left: 4px solid $main-black-color;
-}
-
-.bio:first-child {
-    padding-top: 25px;
     border-top-right-radius: 70px;
     border-top: 4px solid $main-black-color;
-}
-
-.bio:last-child {
     padding-bottom: 25px;
     border-bottom-left-radius: 70px;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.bio-wrapper:hover {
+    box-shadow: 0 0 30px 5px $main-black-color;
+    background-color: $fifth !important;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    transition: all 0.25s ease-in-out;
+    border: 2px solid $main-black-color;
 }
 
 .uniqueFeel {

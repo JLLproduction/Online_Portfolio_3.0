@@ -1,12 +1,12 @@
-<div class="text-center bio-wrapper">
-    <div class="bio h2 bg-transparent">
+<div class="text-center bio-wrapper ml-auto mr-auto h2 bg-transparent" routerLink="/about" tabindex="0" aria-role="link">
+    <div>
         My name is <span class="uniqueFeel">Jack Lopez</span>.
     </div>
-    <div class="bio h2 bg-transparent">
+    <div>
         I am a <span class="uniqueFeel">mean</span> stack developer
     </div>
-    <div class="bio h2 bg-transparent">
+    <div>
         with a keen eye for <span class="uniqueFeel">UX</span>.
     </div>
 </div>
-<canvas #canvas id="canvas" (window:resize)="setCanvas()"></canvas>
+<app-canvas></app-canvas>
