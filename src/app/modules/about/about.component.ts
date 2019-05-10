@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Animations } from "../../shared/animations";
-import { ConsoleReporter } from 'jasmine';
 
 @Component({
   selector: 'app-about',
@@ -22,8 +21,6 @@ export class AboutComponent implements OnInit {
   checkWidth() {
     this.halfHeight = (window.innerHeight / 2);
     this.halfWidth = (window.innerWidth  / 2) - 100;
-
-    console.log(this.halfHeight, this.halfWidth);
   }
 
   adjustImage() {
