@@ -23,8 +23,10 @@ export class CanvasComponent implements AfterViewInit  {
     '#072c3a',
     '#267491',
     '#a7b8b5',
-    '#cec5bc'
+    '#fff'
   ];
+
+  // '#cec5bc'
 
   constructor() { }
 
