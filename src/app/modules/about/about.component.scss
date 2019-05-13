@@ -6,8 +6,7 @@ img {
 }
 
 .padding-sides {
-    padding-left: 125px;
-    padding-right: 125px;
+    padding: 25px 125px;
 }
 
 h1 {
@@ -22,6 +21,7 @@ font-size: 1.2em;
 font-weight: bold;
 margin-top: 25px;
 margin-bottom: 25px;
+color: #267491;
 }
 
 h3 {
@@ -30,7 +30,8 @@ h3 {
 }
 
 p {
-text-align: left;
+    text-align: left;
+    text-indent: 25px;
 }
 
 ul {
@@ -51,4 +52,14 @@ li {
     flex-direction: column;
     display: flex;
     height: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+    #profilePic {
+        display: none;
+    }
+
+    .padding-sides {
+        padding: 25px;
+    }
 }

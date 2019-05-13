@@ -1,12 +1,12 @@
 <div *ngIf="this.showNav; else home" class="row align-items-center h-100">
-    <div class="col-6 verticalAlign">
+    <div class="col-lg-6 col-md-12 verticalAlign">
         <app-nav></app-nav>
     </div>
-    <div class="col-6 verticalAlign">
-        <router-outlet class="mt-auto"></router-outlet>
+    <div class="col-lg-6 col-md-12 scrollBody">
+        <router-outlet></router-outlet>
     </div>
 </div>
 <ng-template #home>
     <router-outlet class="mt-auto"></router-outlet>
+    <app-footer class="mt-auto"></app-footer>
 </ng-template>
-<app-footer class="mt-auto"></app-footer>

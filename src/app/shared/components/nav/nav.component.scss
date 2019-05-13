@@ -1,6 +1,7 @@
 nav {
     margin-left: -15px;
     margin-right: -15px;
+    height: 100%;
 }
 
 a {
@@ -9,4 +10,6 @@ a {
 
 a.active {
     color: #072c3a !important;
+    border-bottom: 3px solid #267491;
+
 }
