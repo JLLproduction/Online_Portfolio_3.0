@@ -2,6 +2,11 @@
     height: 100%;
     border-right: 2px solid black;
     padding: 25px;
+    background-image: url('../assets/images/baltimoreWashington.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(100%);
+    background-size: cover;
 }
 
 .border-bottom {
@@ -18,6 +23,7 @@
         height: auto;
         border-right: 0;
         padding: 25px;
+        background-image: none;
     }
 
     .align-items-center {

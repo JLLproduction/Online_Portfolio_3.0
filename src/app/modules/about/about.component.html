@@ -1,10 +1,12 @@
 <div class="row" (window:resize)="adjustImage()">
   <div class="col-12 text-center padding-sides">
-    <h1>UX Full Stack Developer, out of Baltimore.</h1>
+    <img id="profilePic" [@picLoad]="{value: 'enter', params: { halfHeight: halfHeight, halfWidth: halfWidth } }"
+      src="../../../../../assets/images/profile_pic2.JPG" class="rounded-circle figure-img img-fluid" alt="profile picture">
+    <h1>UX Full Stack Developer, based in Baltimore.</h1>
     <i>"learn to make new
-      mistakes, fail fast and keep moving"</i>
+      mistakes, fail fast, learn from them and keep moving"</i>
     <h2>
-      My passion for Development
+      My passion for development
     </h2>
     <p>
       Since I can remember I have been developing. Developing has given me an opportunity to express my creative side
@@ -15,7 +17,7 @@
     <p>
       I love what I do. I think what makes me so passionate about it is you are always learning. Especially when you try
       new things. So learn to make new
-      mistakes, fail fast and keep moving.
+      mistakes, fail fast, learn from them and keep moving.
     </p>
     <h2>
       My passion for UX
@@ -35,5 +37,3 @@
     </p>
   </div>
 </div>
-<img id="profilePic" [@picLoad]="{value: 'enter', params: { halfHeight: halfHeight, halfWidth: halfWidth } }"
-  src="../../../../../assets/images/profile_pic2.JPG" class="rounded-circle figure-img img-fluid" alt="profile picture">

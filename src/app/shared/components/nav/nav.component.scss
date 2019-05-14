@@ -4,6 +4,13 @@ nav {
     height: 100%;
 }
 
+#navbars {
+    background-color: white;
+    margin-left: -26px;
+    margin-right: -26px;
+    padding: 25px;
+}
+
 a {
  color: #a7b8b5 !important;
 }
@@ -12,4 +19,11 @@ a.active {
     color: #072c3a !important;
     border-bottom: 3px solid #267491;
 
+}
+
+@media only screen and (max-width: 992px) {
+    #navbars {
+        margin: 0;
+        background-color: transparent;
+    }
 }

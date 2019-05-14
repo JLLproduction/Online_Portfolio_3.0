@@ -56,7 +56,8 @@ li {
 
 @media only screen and (max-width: 992px) {
     #profilePic {
-        display: none;
+        position: static;
+        margin-bottom: 25px;
     }
 
     .padding-sides {
