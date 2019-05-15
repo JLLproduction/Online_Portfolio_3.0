@@ -2,13 +2,18 @@
     height: 100%;
     border-right: 2px solid black;
     padding: 25px;
-    background-image: url('../assets/images/baltimoreWashington.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    filter: grayscale(100%);
     background-size: cover;
 }
 
+.aboutBackground {
+    background-image: url('../assets/images/city_buildings.jpg');
+}
+
+.projectsBackground {
+    background-image: url('../assets/images/profile_pic2.JPG');
+}
 .border-bottom {
     border-bottom: 2px solid black;
 }

@@ -1,5 +1,5 @@
 <div *ngIf="this.showNav; else home" class="row align-items-center h-100">
-    <div class="col-lg-6 col-md-12 verticalAlign">
+    <div class="col-lg-6 col-md-12 verticalAlign" [ngClass]="(route.url | removeSlash) + 'Background'">
         <app-nav></app-nav>
     </div>
     <div class="col-lg-6 col-md-12 scrollBody">
