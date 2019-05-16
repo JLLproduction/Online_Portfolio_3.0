@@ -11,19 +11,40 @@ nav {
     padding: 25px;
 }
 
-a {
+li a {
  color: #a7b8b5 !important;
 }
 
-a.active {
+li a.active {
     color: #072c3a !important;
     border-bottom: 3px solid #267491;
 
+}
+
+.alignButton {
+    position: absolute;
+    right: 0;
+}
+
+.downloadIcon {
+    color: white;
+    border-left-width: 5px;
+    background-origin: padding-box;
+    background-image: url('../../../../assets/images/download.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 20px;
+    padding-left: 25px;
+    background-color: #267491;
 }
 
 @media only screen and (max-width: 992px) {
     #navbars {
         margin: 0;
         background-color: transparent;
+    }
+
+    .alignButton {
+        position: static;
     }
 }
