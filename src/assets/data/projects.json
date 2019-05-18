@@ -1,0 +1,26 @@
+[
+    {
+        "link": "https://mdvla.org/",
+        "title": "Maryland Volunteer Lawyers for the Arts",
+        "description": "While working at Code in the Schools, we partnered with MDVLA. I brought in a designer and a writer to work alongside the students and me to revitalize the site. I coached them on how to talk to clients and how to be creative with the client’s vision.",
+        "tags": ["Wordpress", "HTML5", "CSS3", "Javascript", "Salesforce", "Ninja Forms"]
+    },
+    {
+        "link": "https://www.ebcc.church/",
+        "title": "East Baltimore Community Church",
+        "description": "A church plant within our community needed help rebuilding their website and recreating their logo. I worked alongside my designer and writer to transform this project into what you see today, bringing their vision to life.",
+        "tags": ["Share Faith", "HTML5", "CSS3", "Javascript"]
+    },
+    {
+        "link": "https://www.npmjs.com/package/@bellese/angular-design-system",
+        "title": "Reusable Component Library",
+        "description": "Built and managed a reusable component library. Documented, 508 compliant, responsive, and highly robust.",
+        "tags": ["Angular 7", "HTML5", "CSS3", "Typescript", "ES6", "NPM"]
+    },
+    {
+        "link": "https://github.com/JLLproduction/Academic-Management-Group",
+        "title": "Academic Management Group",
+        "description": "A life coach and school counselor, Edward Reed, needed a site to promote his business and services. This site was built over 5 years ago. It has since been replaced but the source code is still available on my github account.",
+        "tags": ["Bootstrap", "HTML5", "CSS3", "JQuery", "Javascript"]
+    }
+]

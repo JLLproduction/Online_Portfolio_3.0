@@ -1,15 +1,31 @@
-.projectsCard {
-    height: 25vh;
-    border: 1px solid black;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 .btn {
     display: block !important;
     padding: 0 !important;
     border: 0 !important;
-    margin-right: -15px;
-    margin-left: -15px;
+    text-align: left !important;
+    color: #267491;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.badge {
+    background-color: #a7b8b5;
+    color: white;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+p {
+    text-indent: 25px;
+    margin-top: 20px;
+}
+
+.col-12 {
+    padding: 25px 125px;
+}
+
+@media only screen and (max-width: 992px) {
+    .col-12 {
+        padding: 25px;
+    }
 }
