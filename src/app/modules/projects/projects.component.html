@@ -4,8 +4,10 @@
       {{ data.title }}
     </a>
     <p>{{ data.description }}</p>
+    <div class="text-center">
     <ng-container *ngFor="let badge of data.tags">
-        <span class="badge badge-pill">{{ badge }}</span>
+      <span class="badge badge-pill">{{ badge }}</span>
     </ng-container>
+  </div>
   </div>
 </div>
