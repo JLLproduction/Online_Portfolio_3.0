@@ -1,13 +1,14 @@
-<div class="row">
-  <div *ngFor="let data of projectsData" class="col-12">
-    <a class="btn" href="{{ data.link }}" target="_blank">
-      {{ data.title }}
-    </a>
-    <p>{{ data.description }}</p>
-    <div class="text-center">
-    <ng-container *ngFor="let badge of data.tags">
-      <span class="badge badge-pill">{{ badge }}</span>
-    </ng-container>
-  </div>
-  </div>
-</div>
+<ng-container *ngFor="let data of projectsData">
+  <a class="btn" href="{{ data.link }}" target="_blank">
+    <div class="row">
+      <div class="col-12">
+        <h2>{{ data.title }}</h2>
+        <p>{{ data.description }}</p>
+        <ng-container *ngFor="let badge of data.tags">
+          <span class="badge badge-pill">{{ badge }}</span>
+        </ng-container>
+      </div>
+    </div>
+  </a>
+  <hr />
+</ng-container>
