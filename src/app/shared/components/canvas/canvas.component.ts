@@ -8,7 +8,7 @@ import { Component, OnInit, ViewChild, AfterViewInit, ElementRef  } from '@angul
 export class CanvasComponent implements AfterViewInit  {
 
   @ViewChild('canvas') canvas: ElementRef;
-  
+
   canvasG: any;
   ctx: any;
   dx: number;
@@ -45,8 +45,8 @@ export class CanvasComponent implements AfterViewInit  {
 
     let numCircles: number;
 
-    //Change radius and number of circles on resize
-    if(this.canvasG.width > 1200) {
+    // Change radius and number of circles on resize
+    if (this.canvasG.width > 1200) {
       this.radi = 300;
       numCircles = 300;
     } else if (this.canvasG.width > 720 && this.canvasG.width <= 1200) {
@@ -56,12 +56,12 @@ export class CanvasComponent implements AfterViewInit  {
       this.radi = 200;
       numCircles = 150;
     }
-    
+
     let colori = 0;
 
     let changeX = -1;
-    
-    //Build put the instructions for building circle in an array to loop through
+
+    // Build put the instructions for building circle in an array to loop through
     for (let i = 0; i < numCircles; i++) {
 
       this.dx = (this.getRandomInt(3) + 1) * changeX;
@@ -70,14 +70,14 @@ export class CanvasComponent implements AfterViewInit  {
       this.x = this.getRandomInt(this.canvasG.width);
       this.y = this.getRandomInt(this.canvasG.height);
 
-      if( colori < this.colorArray.length ) {
+      if ( colori < this.colorArray.length ) {
         colori ++;
       } else {
         colori = 0;
       }
 
       changeX *= -1;
-      
+
       this.circleArray.push({ dx: this.dx, dy: this.dy, x: this.x, y: this.y, radi: this.radi, color: this.colorArray[colori] });
     }
   }
@@ -99,7 +99,7 @@ export class CanvasComponent implements AfterViewInit  {
 
       x.x += x.dx;
       x.y += x.dy;
-    })
+    });
   }
 
   createCircle(left: number, top: number, radius: number, color: string) {

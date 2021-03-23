@@ -14,8 +14,6 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.projectsData = projectsData;
-
-    console.log(this.projectsData);
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Animations } from "../../shared/animations";
+import { Animations } from '../../shared/animations';
 
 @Component({
   selector: 'app-about',
